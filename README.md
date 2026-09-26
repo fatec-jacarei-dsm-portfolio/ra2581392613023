@@ -8,7 +8,7 @@
 
 **Portfólio Online**
 
-🔗 [Acesse o Portfólio]((https://fatec-jacarei-dsm-portfolio.github.io/ra2581392613023/))
+🔗 [Acesse o Portfólio](https://fatec-jacarei-dsm-portfolio.github.io/ra2581392613023/)
 
 ---
 
