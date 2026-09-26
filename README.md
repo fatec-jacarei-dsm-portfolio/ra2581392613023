@@ -8,12 +8,10 @@
 
 **Portfólio Online**
 
-🔗 [Acesse o Portfólio](LINK_PARA_PORTFOLIO)
+🔗 [Acesse o Portfólio]((https://fatec-jacarei-dsm-portfolio.github.io/ra2581392613023/))
 
 ---
 
 **Vídeos de Apresentação**
 
-🎤 2DSM - [Vídeo](LINK_VIDEO_2DSM)  
-🎤 4DSM - [Vídeo](LINK_VIDEO_4DSM)  
-🎤 6DSM - [Vídeo](LINK_VIDEO_6DSM)
+🎤 2DSM - [Vídeo](LINK_VIDEO_2DSM)
