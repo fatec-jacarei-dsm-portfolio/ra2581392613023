@@ -1,11 +1,449 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" data-theme="light">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Portfólio - MARIANA PEREIRA TAVARES</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Mariana P. Tavares</title>
+  <link rel="icon" type="image/svg+xml" href="./img/Icone.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <h1>Bem vindo ao Portfólio de MARIANA PEREIRA TAVARES</h1>
+
+  <header>
+    <div class="header-left">
+      <div class="profile-photo" title="Foto do perfil">
+        <img id="profile-photo-img" src="./img/foto_distorcida_perfil_portfolio_dev.png" alt="Foto de Perfil">
+      </div>
+      <span class="logo-text">Portfólio</span>
+    </div>
+    <nav>
+      <a href="#sobre" data-i18n="nav_about">Sobre</a>
+      <a href="#formacao" data-i18n="nav_education">Formação</a>
+      <a href="#habilidades" data-i18n="nav_skills">Habilidades</a>
+      <a href="#projetos" data-i18n="nav_projects">Projetos</a>
+      <a href="#contato" data-i18n="nav_contact">Contato</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="header-controls">
+
+      <!-- Dropdown de Idioma -->
+      <div class="lang-dropdown" id="langDropdown">
+        <button class="ctrl-btn lang-btn" id="langBtn" aria-label="Selecionar idioma" aria-haspopup="true"
+          aria-expanded="false">
+          <span class="lang-flag" id="langFlag">🇧🇷</span>
+          <span id="langLabel">PT</span>
+          <svg class="lang-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button class="lang-option" data-lang="pt" role="menuitem">
+            <span class="lang-flag">🇧🇷</span>
+            <span>Português</span>
+          </button>
+          <button class="lang-option" data-lang="en" role="menuitem">
+            <span class="lang-flag">🇺🇸</span>
+            <span>English</span>
+          </button>
+          <button class="lang-option" data-lang="es" role="menuitem">
+            <span class="lang-flag">🇪🇸</span>
+            <span>Español</span>
+          </button>
+        </div>
+      </div>
+
+      <button class="ctrl-btn" id="themeBtn" aria-label="Alternar tema">
+        <span id="themeIcon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="greeting" data-i18n="hero_greeting">Olá, meu nome é</div>
+        <h1>Mariana Pereira Tavares</h1>
+        <p class="subtitle" data-i18n="hero_subtitle">Desenvolvedora Full-Stack em formação</p>
+        <p class="description" data-i18n="hero_description">Em aprendizagem contínua para poder ajudar pessoas através
+          da tecnologia e construção de bons sistemas. Atualmente cursando Desenvolvimento de Software Multiplataforma
+          na Fatec Jacareí.</p>
+        <div class="hero-cta">
+          <a href="#projetos" class="btn btn-primary" data-i18n="hero_cta1">Ver projetos →</a>
+          <a href="#contato" class="btn btn-outline" data-i18n="hero_cta2">Entre em contato</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-shape"></div>
+        <div class="hero-code">
+          <div class="line"><span class="code-kw">const</span> <span class="code-var">dev</span> = {</div>
+          <div class="line">&nbsp;&nbsp;nome: <span class="code-str">"Mariana P. Tavares"</span>,</div>
+          <div class="line">&nbsp;&nbsp;foco: <span class="code-str">"full-stack"</span>,</div>
+          <div class="line">&nbsp;&nbsp;paixao: <span class="code-str">"criar coisas"</span></div>
+          <div class="line">};</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="reveal">
+    <div class="section-header">
+      <span class="section-label" data-i18n="about_label">01 — Sobre</span>
+      <h2 class="section-title" data-i18n="about_title">Um pouco sobre mim</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p data-i18n="about_p1">Sou desenvolvedora de software em formação. Amo pensar em possíveis soluções para
+          problemas variados. Minha jornada começou com a vontade de criar artigos tecnológicos que facilitassem ou
+          tornassem a experiência da vida humana mais interessante. Essa vontade de quando era criança me trouxe ao
+          lugar onde estou.</p>
+        <p data-i18n="about_p2">Atualmente estudo Desenvolvimento de Software Multiplataforma na Fatec Jacareí, onde
+          tenho a oportunidade de trabalhar em equipe e aplicar boa parte dos conhecimentos aprendidos durante as aulas
+          em projetos práticos a cada semestre. Cada projeto é uma chance de sair da zona de conforto e, com isso,
+          evoluir significativamente no processo de desenvolver código e relações interpessoais.</p>
+        <p data-i18n="about_p3">Acredito que código bom é aquele que resolve problemas reais de forma eficaz, escalável
+          e segura.</p>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">2</div>
+            <div class="stat-label" data-i18n="stat_projects">Projetos entregues</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">7+</div>
+            <div class="stat-label" data-i18n="stat_techs">Tecnologias dominadas</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label" data-i18n="stat_langs">Idiomas falados</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">∞</div>
+            <div class="stat-label" data-i18n="stat_curiosity">Curiosidade</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:1.5rem;font-size:1.5rem" data-i18n="about_interests">Interesses & Objetivos</h3>
+        <p style="margin-bottom:1.5rem" data-i18n="about_interests_text">Busco evoluir como desenvolvedora full-stack.
+          Minhas principais áreas de interesse são:</p>
+        <ul style="list-style:none;margin-bottom:2rem">
+          <li style="padding:.6rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.8rem">
+            <span style="color:var(--accent);font-weight:700">→</span>
+            <span data-i18n="interest_1">Desenvolvimento Full-Stack</span>
+          </li>
+          <li style="padding:.6rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.8rem">
+            <span style="color:var(--accent);font-weight:700">→</span>
+            <span data-i18n="interest_3">Arquitetura de Software</span>
+          </li>
+          <li style="padding:.6rem 0;display:flex;align-items:center;gap:.8rem">
+            <span style="color:var(--accent);font-weight:700">→</span>
+            <span data-i18n="interest_4">Integração de Sistemas</span>
+          </li>
+          <li style="padding:.6rem 0;display:flex;align-items:center;gap:.8rem">
+            <span style="color:var(--accent);font-weight:700">→</span>
+            <span data-i18n="interest_5">Cibersegurança</span>
+          </li>
+          <li style="padding:.6rem 0;display:flex;align-items:center;gap:.8rem">
+            <span style="color:var(--accent);font-weight:700">→</span>
+            <span data-i18n="interest_6">Automação</span>
+          </li>
+          <li style="padding:.6rem 0;display:flex;align-items:center;gap:.8rem">
+            <span style="color:var(--accent);font-weight:700">→</span>
+            <span data-i18n="interest_7">Machine Learning</span>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="formacao" class="reveal">
+    <div class="section-header">
+      <span class="section-label" data-i18n="edu_label">02 — Formação</span>
+      <h2 class="section-title" data-i18n="edu_title">Trajetória acadêmica</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date" data-i18n="edu_1_date">2026 — Presente</div>
+        <h3 class="timeline-title" data-i18n="edu_1_title">Tecnólogo em Desenvolvimento de Software Multiplataforma</h3>
+        <div class="timeline-subtitle" data-i18n="edu_1_school">FATEC Jacareí — Cursando</div>
+        <p class="timeline-desc" data-i18n="edu_1_desc">Formação tecnológica com foco em desenvolvimento full-stack,
+          metodologias ágeis e projetos integradores semestrais.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date" data-i18n="edu_2_date">2024 — 2025</div>
+        <h3 class="timeline-title" data-i18n="edu_2_title">Ensino Médio Técnico</h3>
+        <div class="timeline-subtitle" data-i18n="edu_2_school">Escola Estadual Professor Antônio José de Siqueira</div>
+        <p class="timeline-desc" data-i18n="edu_2_desc">Base técnica em conceitos de processos corporativos, finanças e
+          gestão organizacional.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades" class="reveal">
+    <div class="section-header">
+      <span class="section-label" data-i18n="skills_label">03 — Habilidades</span>
+      <h2 class="section-title" data-i18n="skills_title">Ferramentas do dia a dia</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="skills-categories">
+      <div class="skill-category">
+        <div class="skill-category-icon">⟨⟩</div>
+        <h3 data-i18n="skills_cat1">Linguagens</h3>
+        <ul class="skill-list">
+          <li><span>HTML5</span>
+            <div class="skill-level">
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+            </div>
+          </li>
+          <li><span>CSS3</span>
+            <div class="skill-level">
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot"></span>
+            </div>
+          </li>
+          <li><span>JavaScript</span>
+            <div class="skill-level">
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot"></span>
+            </div>
+          </li>
+          <li><span>TypeScript</span>
+            <div class="skill-level">
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot"></span>
+            </div>
+          </li>
+          <li><span>SQL</span>
+            <div class="skill-level"><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
+                class="skill-dot filled"></span><span class="skill-dot"></span><span class="skill-dot"></span></div>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-icon">⧉</div>
+        <h3 data-i18n="skills_cat2">Frameworks & Libs</h3>
+        <ul class="skill-list">
+          <li><span>React</span>
+            <div class="skill-level">
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot"></span>
+            </div>
+          </li>
+          <li><span>Node.js</span>
+            <div class="skill-level">
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot"></span>
+              <span class="skill-dot"></span>
+            </div>
+          </li>
+          <li><span>Express</span>
+            <div class="skill-level">
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot"></span>
+              <span class="skill-dot"></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-icon">⚙</div>
+        <h3 data-i18n="skills_cat3">Ferramentas</h3>
+        <ul class="skill-list">
+          <li><span>Git & GitHub</span>
+            <div class="skill-level">
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot"></span>
+            </div>
+          </li>
+          <li><span>Figma</span>
+            <div class="skill-level">
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot"></span>
+            </div>
+          </li>
+          <li><span>PostgreSQL</span>
+            <div class="skill-level">
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot"></span>
+              <span class="skill-dot"></span>
+            </div>
+          </li>
+          <li><span>Docker</span>
+            <div class="skill-level">
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot"></span>
+              <span class="skill-dot"></span>
+              <span class="skill-dot"></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <div class="skill-category-icon">✦</div>
+        <h3 data-i18n="skills_cat4">Métodos</h3>
+        <ul class="skill-list">
+          <li><span>Scrum</span>
+            <div class="skill-level">
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot"></span>
+            </div>
+          </li>
+          <li><span>Design Thinking</span>
+            <div class="skill-level">
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot"></span>
+              <span class="skill-dot"></span>
+            </div>
+          </li>
+          <li><span>UI/UX Design</span>
+            <div class="skill-level">
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot filled"></span>
+              <span class="skill-dot"></span>
+              <span class="skill-dot"></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificados" class="reveal">
+    <div class="section-header">
+      <span class="section-label" data-i18n="cert_label">04 — Certificados</span>
+      <h2 class="section-title" data-i18n="cert_title">Aprendizado contínuo</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-year">2026</div>
+        <h3 class="cert-title" data-i18n="cert_1_title">Certificado EF SET</h3>
+        <div class="cert-issuer" data-i18n="cert_1_issuer">EF Education First</div>
+        <p class="cert-desc" data-i18n="cert_1_desc">Inglês C1 Avançado (EF SET), com destaque para leitura em nível
+          proficiente (C2) e comunicação corporativa (B2)</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-year">2026</div>
+        <h3 class="cert-title" data-i18n="cert_2_title">Certificado CISCO IT_Essentials</h3>
+        <div class="cert-issuer" data-i18n="cert_2_issuer">Cisco Systems</div>
+        <p class="cert-desc" data-i18n="cert_2_desc">Certificado Cisco IT Essentials 7.01 que atesta competências
+          práticas na montagem, configuração, segurança e manutenção de computadores e redes básicas.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-year">2024</div>
+        <h3 class="cert-title" data-i18n="cert_3_title">Certificado de fundamentos em programação de multiplataforma
+          (web e mobile)</h3>
+        <div class="cert-issuer" data-i18n="cert_3_issuer">SENAI</div>
+        <p class="cert-desc" data-i18n="cert_3_desc">Certificação baseada em conhecimentos essenciais para o
+          desenvolvimento de aplicações multiplataforma focadas em Web e Mobile.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos" class="projects-section reveal">
+    <div class="section-header">
+      <span class="section-label" data-i18n="proj_label">05 — Projetos</span>
+      <h2 class="section-title" data-i18n="proj_title">O que já construí</h2>
+      <p class="section-subtitle" data-i18n="proj_subtitle">Uma coleção de trabalhos acadêmicos, profissionais e
+        pessoais</p>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Todos</button>
+      <button class="filter-btn" data-filter="academic" data-i18n="filter_academic">Acadêmicos</button>
+      <button class="filter-btn" data-filter="professional" data-i18n="filter_professional">Profissionais</button>
+      <button class="filter-btn" data-filter="personal" data-i18n="filter_personal">Pessoais</button>
+    </div>
+
+    <div class="cards-view" id="cardsView">
+      <!--Os projetos estão no arquivo Script.js-->
+    </div>
+  </section>
+
+  <section id="contato" class="reveal">
+    <div class="section-header">
+      <span class="section-label" data-i18n="contact_label">06 — Contato</span>
+      <h2 class="section-title" data-i18n="contact_title">Vamos conversar?</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="contact-content">
+      <p data-i18n="contact_desc">Estou sempre aberto a novas oportunidades, colaborações e conversas sobre tecnologia.
+        Se você tem um projeto em mente ou quer trocar ideias, entre em contato pelas redes abaixo.</p>
+      <div class="contact-links">
+        <a href="https://github.com/Mari432hz" target="_blank" rel="noopener" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/mariana-tavares-perfil" target="_blank" rel="noopener"
+          class="contact-link">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 — Fatec Jacareí · DSM</p>
+  </footer>
+
+  <script src="./js/script.js"></script>
 </body>
+
 </html>

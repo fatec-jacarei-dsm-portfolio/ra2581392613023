@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <defs>
+    <style>
+      @keyframes dash {
+        to { stroke-dashoffset: -20; }
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-4px); }
+      }
+      .bg { fill: #1e2a4a; }
+      .grid { stroke: #2d3a6a; stroke-width: 0.5; opacity: 0.4; }
+      .wire { stroke: #5a7ab5; stroke-width: 1.5; fill: none; stroke-dasharray: 4 3; animation: dash 1.5s linear infinite; }
+      .wire-solid { stroke: #5a7ab5; stroke-width: 1.5; fill: none; }
+      .line-placeholder { fill: #3a4a7a; }
+      .icon-box { stroke: #7b68ee; stroke-width: 2; fill: none; stroke-dasharray: 5 3; animation: dash 2s linear infinite; }
+      .icon-line { stroke: #7b68ee; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .code-symbol { fill: #5a7ab5; font-family: 'Courier New', monospace; font-size: 14px; opacity: 0.6; animation: blink 3s ease-in-out infinite; }
+      .dot { fill: #5a7ab5; }
+      .float-1 { animation: float 3s ease-in-out infinite; }
+      .float-2 { animation: float 3.5s ease-in-out infinite 0.5s; }
+    </style>
+  </defs>
+
+  <!-- Fundo -->
+  <rect class="bg" width="400" height="250"/>
+
+  <!-- Grid sutil -->
+  <g class="grid">
+    <line x1="0" y1="25" x2="400" y2="25"/>
+    <line x1="0" y1="50" x2="400" y2="50"/>
+    <line x1="0" y1="75" x2="400" y2="75"/>
+    <line x1="0" y1="100" x2="400" y2="100"/>
+    <line x1="0" y1="125" x2="400" y2="125"/>
+    <line x1="0" y1="150" x2="400" y2="150"/>
+    <line x1="0" y1="175" x2="400" y2="175"/>
+    <line x1="0" y1="200" x2="400" y2="200"/>
+    <line x1="0" y1="225" x2="400" y2="225"/>
+    <line x1="25" y1="0" x2="25" y2="250"/>
+    <line x1="50" y1="0" x2="50" y2="250"/>
+    <line x1="75" y1="0" x2="75" y2="250"/>
+    <line x1="100" y1="0" x2="100" y2="250"/>
+    <line x1="125" y1="0" x2="125" y2="250"/>
+    <line x1="150" y1="0" x2="150" y2="250"/>
+    <line x1="175" y1="0" x2="175" y2="250"/>
+    <line x1="200" y1="0" x2="200" y2="250"/>
+    <line x1="225" y1="0" x2="225" y2="250"/>
+    <line x1="250" y1="0" x2="250" y2="250"/>
+    <line x1="275" y1="0" x2="275" y2="250"/>
+    <line x1="300" y1="0" x2="300" y2="250"/>
+    <line x1="325" y1="0" x2="325" y2="250"/>
+    <line x1="350" y1="0" x2="350" y2="250"/>
+    <line x1="375" y1="0" x2="375" y2="250"/>
+  </g>
+
+  <!-- Janela wireframe principal -->
+  <rect class="wire" x="40" y="35" width="320" height="180" rx="6"/>
+
+  <!-- Barra superior da janela -->
+  <line class="wire-solid" x1="40" y1="55" x2="360" y2="55"/>
+  <circle class="dot" cx="55" cy="45" r="3"/>
+  <circle class="dot" cx="70" cy="45" r="3"/>
+  <circle class="dot" cx="85" cy="45" r="3"/>
+
+  <!-- Linhas de placeholder (texto) -->
+  <rect class="line-placeholder" x="60" y="75" width="90" height="12" rx="3"/>
+  <rect class="line-placeholder" x="60" y="100" width="180" height="10" rx="3"/>
+  <rect class="line-placeholder" x="60" y="120" width="140" height="10" rx="3"/>
+
+  <!-- Ícone de imagem com gráfico -->
+  <g class="float-1">
+    <rect class="icon-box" x="230" y="75" width="90" height="70" rx="4"/>
+    <polyline class="icon-line" points="245,120 260,105 275,115 290,95 305,110"/>
+  </g>
+
+  <!-- Símbolo de código no canto -->
+  <text class="code-symbol" x="360" y="235">&lt;/&gt;</text>
+</svg>
